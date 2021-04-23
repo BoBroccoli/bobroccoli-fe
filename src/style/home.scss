@@ -1,0 +1,14 @@
+.content {
+    position: absolute;
+    background-image: url('../assets/background.jpg');
+    height: 100%;
+    width: 100%;
+    .info {
+        margin-top: 170px;
+        position: relative;
+        .name {
+            text-align: center;
+            color: #F5F5F5;
+        }
+    }
+}

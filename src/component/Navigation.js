@@ -1,42 +1,43 @@
 import React from 'react';
-import { AppBar, Toolbar, Menu, MenuItem, IconButton } from '@material-ui/core';
+import { AppBar, Toolbar, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
 
 const useStyles = makeStyles({
-    hamberger: {
+    bar: {
+        background: '#333',
+    },
+    headerButtonHome: {
         marginLeft: 'auto',
+        color: 'white'
+    },
+    headerButton: {
+        color: 'white'
     },
 });
 
 
 const Navigation = () => {
-    
-    const [anchorEl, setAnchorEl] = React.useState(null);
-
-    const handleClick = (e) => {
-        setAnchorEl(e.currentTarget);
-    };
-
-    const handleClose = () => {
-        setAnchorEl(null);
-      };
     const classes = useStyles();
     return (
-        <AppBar position="static">
+        <AppBar position="static" className={classes.bar}>
             <Toolbar>
                 <h3>BoBroccoli</h3>
-                <IconButton className={classes.hamberger}>
-                    <MenuIcon onClick={handleClick}/>
-                </IconButton>
-                <Menu
-                anchorEl={anchorEl}
-                open={Boolean(anchorEl)}
-                onClose={handleClose}>
-                <MenuItem >Profile</MenuItem>
-                <MenuItem >My account</MenuItem>
-                <MenuItem >Logout</MenuItem>
-                </Menu>
+                
+                <Button size="small" className={classes.headerButtonHome}>
+                    Home
+                </Button>
+
+                <Button size="small" className={classes.headerButton}>
+                    About Me
+                </Button>
+
+                <Button size="small" className={classes.headerButton}>
+                    Experiences
+                </Button>
+
+                <Button size="small" className={classes.headerButton}>
+                    Services
+                </Button>
             </Toolbar>
         </AppBar>
     )

@@ -1,9 +1,7 @@
-import Navigation from './component/Navigation';
+import Home from './component/Home';
 function App() {
   return (
-    <div>
-      <Navigation></Navigation>
-    </div>
+    <Home />
   );
 }
 
