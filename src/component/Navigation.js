@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
     bar: {
         background: '#333',
+        position: 'fixed'
     },
     headerButtonHome: {
         marginLeft: 'auto',
@@ -30,7 +31,7 @@ const Navigation = () => {
     };
 
     return (
-        <AppBar position="fixed" className={classes.bar}>
+        <AppBar className={classes.bar}>
             <Toolbar>
                 <h3>BoBroccoli</h3>
                 
