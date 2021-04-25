@@ -1,13 +1,24 @@
 .content {
     position: absolute;
     background-image: url('../assets/background.jpg');
+    background-size: cover;
     height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .info {
-        margin-top: 170px;
-        position: relative;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+            border-radius: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
         .name {
-            text-align: center;
             color: #F5F5F5;
         }
     }
