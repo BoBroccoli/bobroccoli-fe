@@ -15,6 +15,8 @@
         align-items: center;
         img {
             border-radius: 50%;
+            width: 150px;
+            height: 150px;
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 20px;
@@ -22,8 +24,10 @@
         .name {
             color: #F5F5F5;
             line-height: 30px;
+            margin-bottom: 20px;
         }
         ul {
+            transform: translateY(-20px);
             display: flex;
             li {
                 display: flex;
@@ -42,29 +46,17 @@
                     &:hover {
                         transform: translate(0px, -8px);
                     }
-                    .fa-facebook {
-                        color: black;
-                        transition: 0.6s;
+                    .fa-youtube {
+                        color: #cd201f;
                         font-size: 25px;
-                        &:hover {
-                            color: #fff;
-                        }
                     }
                     .fa-linkedin {
-                        color: black;
-                        transition: 0.6s;
+                        color: #0077B5;
                         font-size: 25px;
-                        &:hover {
-                            color: #fff;
-                        }
                     }
                     .fa-github {
                         color: black;
-                        transition: 0.6s;
                         font-size: 25px;
-                        &:hover {
-                            color: #fff;
-                        }
                     }
                 }
                 list-style: none;
@@ -74,20 +66,61 @@
             li:nth-child(1) a{
                 transform: 0.6s;
                 &:hover {
-                    background-color: #3b5998;
+                    background-color: #cd201f;
+                    .fa-youtube {
+                        color: #fff;
+                    }
                 }
             }
             li:nth-child(2) a{
                 transform: 0.6s;
                 &:hover {
                     background-color: #007bb6;
+                    .fa-linkedin {
+                        color: #fff;
+                    }
                 }
             }
             li:nth-child(3) a{
                 transform: 0.6s;
                 &:hover {
                     background-color: #211F1F;
+                    .fa-github {
+                        color: #fff;
+                    }
                 }
+            }
+        }
+        .downloadBt {
+            position: relative;
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 20px;
+            color: #fff;
+            display: flex;
+            background-color: #333;
+            justify-content: space-between;
+            overflow: hidden;
+            svg {
+                position: relative;
+                left: -10px;
+            }
+            &::after {
+                content: '';
+                height: 120px;
+                width: 40px;
+                position: absolute;
+                background-color:#fff;
+                top: -40px;
+                left: -60px;
+                opacity: 0.1;
+                transform: rotate(30deg);
+                transition: 0.6s;
+            }
+            &:hover::after {
+                transform: translateX(300px) rotate(30deg);
             }
         }
     }
