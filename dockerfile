@@ -4,6 +4,8 @@ WORKDIR /ui
 
 COPY package.json ./
 
+RUN npm install node-sass
+RUN npm install file-saver --save
 RUN npm install
 
 COPY . /ui
