@@ -11,7 +11,6 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-                <Navigation />
                 <div className='content'>
                     <div className='info'>
                         <img src={profileLogo} alt="profile"></img>
